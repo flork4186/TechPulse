@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechPulse — Портал новин ІТ-галузі</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Шапка сайту -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+      <nav class="nav" aria-label="Головне меню">
+        <ul class="nav__list">
+          <li><a class="nav__link nav__link--active" href="index.html">Головна</a></li>
+          <li><a class="nav__link" href="pages/catalog.html">Статті</a></li>
+          <li><a class="nav__link" href="pages/article.html">Картка статті</a></li>
+          <li><a class="nav__link" href="pages/login.html">Увійти</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <form class="search-form" action="pages/catalog.html" method="get">
+          <input class="search-form__input" type="search" name="q" placeholder="Пошук новин..." aria-label="Пошук новин">
+        </form>
+        <a class="btn btn--primary" href="#subscribe">Підписатися</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section: Головна новина дня -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <article class="hero-card">
+          <img class="hero-card__img" src="assets/img/hero-ai.png" alt="Нова революція штучного інтелекту" width="1200" height="500">
+          <div class="hero-card__content">
+            <span class="badge badge--rubric">AI</span>
+            <h1 class="hero-card__title">Наступна революція штучного інтелекту відбувається безпосередньо на вашому пристрої</h1>
+            <p class="hero-card__text">Менші моделі, швидші відповіді. Чому майбутнє штучного інтелекту стає ближчим до локальних обчислень.</p>
+            <div class="hero-card__meta">
+              <span class="author">Автор: Майя Чен (User)</span>
+              <time datetime="2026-10-20">20 Жовтня 2026</time>
+              <span class="comments-count">💬 42 коментарі</span>
+            </div>
+            <a class="btn btn--secondary" href="pages/article.html">Читати повністю</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Основний блок новин із сайдбаром -->
+    <section class="section container workspace">
+      <!-- Центральна стрічка новин -->
+      <div class="workspace__center">
+        <div class="section__header">
+          <h2 class="section__title">Свіжі публікації</h2>
+          <a class="section__link" href="pages/catalog.html">Усі статті &rarr;</a>
+        </div>
+
+        <div class="cards">
+          <!-- Стаття 1 -->
+          <article class="card">
+            <img class="card__img" src="assets/img/article-app.png" alt="Тихе повернення локальних додатків" width="320" height="200">
+            <div class="card__body">
+              <span class="badge badge--rubric">Software</span>
+              <h3 class="card__title"><a href="pages/article.html">Тихе повернення локальних додатків</a></h3>
+              <p class="card__text">Розробники повертають десктопний софт. Чому ваш наступний додаток працюватиме офлайн.</p>
+              <div class="card__meta">
+                <span class="card__author">Алекс Ренн</span>
+                <span class="card__comments">💬 18 коментарів</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Стаття 2 -->
+          <article class="card">
+            <img class="card__img" src="assets/img/article-chips.png" alt="Малі чіпи та великий стрибок" width="320" height="200">
+            <div class="card__body">
+              <span class="badge badge--rubric">Hardware</span>
+              <h3 class="card__title"><a href="pages/article.html">Малі чіпи. Великий стрибок уперед</a></h3>
+              <p class="card__text">Нове покоління процесорів ставить ефективність вище за сиру обчислювальну потужність.</p>
+              <div class="card__meta">
+                <span class="card__author">Сара Парк</span>
+                <span class="card__comments">💬 24 коментарі</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Стаття 3 -->
+          <article class="card">
+            <img class="card__img" src="assets/img/article-cloud.png" alt="Хмара стає ближчою" width="320" height="200">
+            <div class="card__body">
+              <span class="badge badge--rubric">Cloud</span>
+              <h3 class="card__title"><a href="pages/article.html">Хмара стає ближчою до периферії</a></h3>
+              <p class="card__text">Всередині компактних дата-центрів, які наближають хмарні обчислення до користувача.</p>
+              <div class="card__meta">
+                <span class="card__author">Деніел Кім</span>
+                <span class="card__comments">💬 12 коментарів</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Стаття 4 -->
+          <article class="card">
+            <img class="card__img" src="assets/img/article-passkeys.png" alt="Passkeys готові до впровадження" width="320" height="200">
+            <div class="card__body">
+              <span class="badge badge--rubric">Cybersecurity</span>
+              <h3 class="card__title"><a href="pages/article.html">Passkeys готові. А ми?</a></h3>
+              <p class="card__text">Майбутнє без паролів вже тут. Чому великі сервіси активно переходять на новий стандарт.</p>
+              <div class="card__meta">
+                <span class="card__author">Ніна Патель</span>
+                <span class="card__comments">💬 31 коментар</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Правий сайдбар -->
+      <aside class="workspace__sidebar--right" aria-label="Популярне та автори">
+        <!-- Блок Тренди -->
+        <section class="sidebar-block">
+          <h2 class="sidebar-block__title">В тренді зараз ↗</h2>
+          <ol class="trending-list">
+            <li class="trending-list__item">
+              <span class="badge badge--rubric">Software</span>
+              <h3 class="trending-list__title"><a href="pages/article.html">Чому розробники переглядають роль AI-помічників</a></h3>
+            </li>
+            <li class="trending-list__item">
+              <span class="badge badge--rubric">Hardware</span>
+              <h3 class="trending-list__title"><a href="pages/article.html">Гонка за найефективніші AI-чіпи</a></h3>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Блок Рубрики (Rubric) -->
+        <section class="sidebar-block">
+          <h2 class="sidebar-block__title">Популярні рубрики</h2>
+          <div class="tags">
+            <a class="tag-link" href="pages/catalog.html?rubric_id=1">Artificial Intelligence</a>
+            <a class="tag-link" href="pages/catalog.html?rubric_id=2">Cybersecurity</a>
+            <a class="tag-link" href="pages/catalog.html?rubric_id=3">Cloud</a>
+            <a class="tag-link" href="pages/catalog.html?rubric_id=4">Software</a>
+          </div>
+        </section>
+
+        <!-- Блок Активні Користувачі (User) -->
+        <section class="sidebar-block">
+          <h2 class="sidebar-block__title">Автори спільноти (User)</h2>
+          <ul class="users-list">
+            <li class="users-list__item">
+              <img class="user-avatar" src="assets/img/user-alex.png" alt="Алекс Чен" width="40" height="40">
+              <div class="user-info">
+                <span class="user-name">Алекс Чен</span>
+                <span class="user-stats">120 публікацій</span>
+              </div>
+            </li>
+            <li class="users-list__item">
+              <img class="user-avatar" src="assets/img/user-nina.png" alt="Ніна Патель" width="40" height="40">
+              <div class="user-info">
+                <span class="user-name">Ніна Патель</span>
+                <span class="user-stats">85 публікацій</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <!-- Форма підписки -->
+    <section id="subscribe" class="subscribe-section">
+      <div class="container subscribe-section__inner">
+        <h2 class="subscribe-section__title">Будьте на крок попереду</h2>
+        <p class="subscribe-section__text">Найважливіші ІТ-новини тижня у вашій поштовій скриньці щоп'ятниці.</p>
+        <form class="subscribe-form" action="#" method="post">
+          <input class="subscribe-form__input" type="email" placeholder="Ваш e-mail" required aria-label="Ваш e-mail">
+          <button class="btn btn--primary" type="submit">Підписатися безкоштовно</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Підвал -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">Tech<span>Pulse</span></a>
+        <p class="footer__text">Незалежний погляд на технології та ІТ-індустрію.</p>
+      </div>
+      <ul class="footer__list">
+        <li><a href="pages/catalog.html">Усі статті</a></li>
+        <li><a href="pages/catalog.html?rubric_id=1">Software</a></li>
+        <li><a href="pages/catalog.html?rubric_id=2">Hardware</a></li>
+        <li><a href="pages/catalog.html?rubric_id=3">AI & Cloud</a></li>
+      </ul>
+      <p class="footer__copy">© 2026 TechPulse. Всі права захищені.</p>
+    </div>
+  </footer>
+  <script>
+  (() => {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const toggleHeader = () => {
+      header.classList.toggle('header--compact', window.scrollY > 40);
+    };
+
+    toggleHeader();
+    window.addEventListener('scroll', toggleHeader, { passive: true });
+  })();
+</script>
+</body>
+</html>
