@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechPulse — Авторизація користувача</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../index.html">Tech<span>Pulse</span></a>
+      <nav class="nav" aria-label="Головне меню">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Головна</a></li>
+          <li><a class="nav__link" href="catalog.html">Статті</a></li>
+          <li><a class="nav__link" href="article.html">Картка статті</a></li>
+          <li><a class="nav__link nav__link--active" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary" href="../index.html#subscribe">Підписатися</a>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="auth-section section">
+      <div class="auth-card">
+        <h1 class="auth-card__title">Вхід до TechPulse</h1>
+        <p class="auth-card__subtitle">Авторизуйтесь як Користувач (User) або Адміністратор для управління матеріалами.</p>
+
+        <form class="auth-form" action="#" method="post">
+          <div class="form-group">
+            <label for="login-email">Електронна пошта (Email):</label>
+            <input class="form-control" id="login-email" type="email" name="email" placeholder="user@techpulse.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Пароль:</label>
+            <input class="form-control" id="login-password" type="password" name="password" placeholder="••••••••" required>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit">Увійти в систему</button>
+        </form>
+
+        <p class="auth-card__footer">
+          Немає акаунту? <a href="#">Зареєструватися</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Підвал -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 TechPulse — Авторизація</p>
+      <ul class="footer__list">
+        <li><a href="../index.html">На головну</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+  (() => {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const toggleHeader = () => {
+      header.classList.toggle('header--compact', window.scrollY > 40);
+    };
+
+    toggleHeader();
+    window.addEventListener('scroll', toggleHeader, { passive: true });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechPulse — Картка статті</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../index.html">Tech<span>Pulse</span></a>
+      <nav class="nav" aria-label="Головне меню">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Головна</a></li>
+          <li><a class="nav__link" href="catalog.html">Статті</a></li>
+          <li><a class="nav__link nav__link--active" href="article.html">Картка статті</a></li>
+          <li><a class="nav__link" href="login.html">Увійти</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary" href="../index.html#subscribe">Підписатися</a>
+    </div>
+  </header>
+
+  <main class="main container">
+    <!-- Повний текст статті (Article) -->
+    <article class="article-full section">
+      <header class="article-full__header">
+        <span class="badge badge--rubric">Artificial Intelligence</span>
+        <h1 class="article-full__title">Наступна революція штучного інтелекту відбувається безпосередньо на вашому пристрої</h1>
+        <div class="article-full__meta">
+          <span class="author">Автор: Майя Чен (User)</span>
+          <time datetime="2026-10-20">20 Жовтня 2026</time>
+          <span>Час читання: 5 хв</span>
+        </div>
+      </header>
+
+      <img class="article-full__img" src="../assets/img/hero-ai.png" alt="Революція штучного інтелекту" width="1000" height="450">
+
+      <div class="article-full__content">
+        <p>Сучасні технології штучного інтелекту роблять великий крок убік від централізованих дата-центрів. Все більше розробників орієнтуються на локальне виконання нейромережевих моделей прямо на мобільних процесорах та персональних ПК.</p>
+        <p>Це вирішує дві ключові проблеми сучасного вебу: конфіденційність персональних даних та затримку відповіді (latency). Завдяки спеціалізованим NPU-блокам у нових чіпах, обробка тексту та зображень відбувається миттєво і без підключення до мережі Інтернет.</p>
+      </div>
+    </article>
+
+    <!-- Секція коментарів (Comment) -->
+    <section class="comments-section section">
+      <h2 class="comments-section__title">Обговорення та коментарі (3)</h2>
+
+      <!-- Список коментарів -->
+      <div class="comments-list">
+        <article class="comment-item">
+          <div class="comment-item__header">
+            <span class="comment-item__author">Дмитро Бекарь (User)</span>
+            <time class="comment-item__date" datetime="2026-10-20T14:30">20 Жовтня, 14:30</time>
+          </div>
+          <p class="comment-item__text">Чудова стаття! Локальний AI — це саме те, чого чекали для безпеки корпоративних даних.</p>
+        </article>
+
+        <article class="comment-item">
+          <div class="comment-item__header">
+            <span class="comment-item__author">Олена Коваль</span>
+            <time class="comment-item__date" datetime="2026-10-20T15:10">20 Жовтня, 15:10</time>
+          </div>
+          <p class="comment-item__text">Цікаво, як це вплине на енергоефективність батарей у ноутбуках при тривалому навантаженні.</p>
+        </article>
+      </div>
+
+      <!-- Форма додавання коментаря -->
+      <aside class="add-comment-box">
+        <h3 class="add-comment-box__title">Залишити коментар</h3>
+        <form class="comment-form" action="#" method="post">
+          <div class="form-group">
+            <label for="comment-user">Ваше ім'я або Email:</label>
+            <input class="form-control" id="comment-user" type="text" name="user_name" placeholder="Іван Іванов" required>
+          </div>
+          <div class="form-group">
+            <label for="comment-text">Текст коментаря:</label>
+            <textarea class="form-control" id="comment-text" name="text" rows="4" placeholder="Напишіть вашу думку..." required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Опублікувати коментар</button>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Підвал -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 TechPulse — Сторінка статті</p>
+      <ul class="footer__list">
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="catalog.html">Назад до статей</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+  (() => {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const toggleHeader = () => {
+      header.classList.toggle('header--compact', window.scrollY > 40);
+    };
+
+    toggleHeader();
+    window.addEventListener('scroll', toggleHeader, { passive: true });
+  })();
+</script>
+</body>
+</html>
